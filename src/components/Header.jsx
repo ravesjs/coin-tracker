@@ -1,13 +1,24 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from '../styles/_styles.module.scss'
 import logo from '../../public/webpack-icon.svg'
 
-const now = new Date()
+
 function Header() {
+  const [time, setTime] = useState(new Date())
+  
+  useEffect(() => {
+    const timerId = setInterval(() => tick(), 1000)
+    return () => clearInterval(timerId)
+  }, [])
+  
+  function tick() {
+    setTime(new Date())
+  }
+  
   return (
     <header className={styles.header}>
       <img src={logo} alt={'Studying'} />
-      <span>Время сейчас: {now.toLocaleTimeString()}</span>
+      <span>Время сейчас: {time.toLocaleTimeString()}</span>
     </header>
   )
 }

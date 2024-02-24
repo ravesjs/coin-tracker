@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from './components/Header'
-import SocialInfo from './components/SocialInfo'
+import SocialInfo from './components/ui/SocialInfo'
 import { info } from './data'
-import Button from './components/Button'
+import Button from './components/ui/Button'
+import Video from './components/Video'
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section>
@@ -22,8 +23,12 @@ function App() {
           <Button>Знаю</Button>
           <Button>А</Button>
         </section>
+        <br />
+        <section>
+          <Video />
+        </section>
       </main>
-    </div>
+    </>
   )
 }
 
