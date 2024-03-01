@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import styles from '../styles/_styles.module.scss'
-import logo from '../../public/webpack-icon.svg'
+import styles from './Header.css'
+import logo from '../../../public/webpack-icon.svg'
 
 
 function Header() {

@@ -1,22 +1,13 @@
 import React from 'react'
-import Header from './components/Header'
-import SocialInfo from './components/ui/SocialInfo'
-import { info } from './data'
-import Button from './components/ui/Button'
-import Video from './components/Video'
+import Header from './components/Header/Header'
+import Button from './components/ui/Button/Button'
+import styles from 'styles/_styles.module.scss'
 
 function App() {
   return (
     <>
       <Header />
-      <main>
-        <section>
-          <ul>
-            <SocialInfo {...info[0]} />
-            <SocialInfo {...info[1]} />
-            <SocialInfo {...info[2]} />
-          </ul>
-        </section>
+      <main className={styles.main}>
         <section>
           <h3>Что такое компот?</h3>
           <Button>Не знаю</Button>
@@ -24,9 +15,6 @@ function App() {
           <Button>А</Button>
         </section>
         <br />
-        <section>
-          <Video />
-        </section>
       </main>
     </>
   )

@@ -1,54 +1,7 @@
-.header {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  background-color: #c0c0c0;
-  color: #000000;
-  border-bottom: 3px solid #9c9c9c;
-  padding: 0 20px;
-
-  h3 {
-    margin-top: -20px;
-  }
-}
-
-.hello {
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-color: blueviolet;
-  margin-top: 100px;
-}
-
-.button {
-  padding: 0.8rem 2rem;
-  margin-right: 1rem;
-  background-color: rgb(92, 251, 190);
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-  &:active {
-    color: #fff;
-    background: blue;
-  }
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
 .alignCenter {
   text-align: center;
 }
 
-.input {
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+.main {
+  padding-top: 60px;
 }
