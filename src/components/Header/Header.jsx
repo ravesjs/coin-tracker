@@ -1,24 +1,15 @@
-import React, {useState, useEffect} from 'react'
-import styles from './Header.css'
-import logo from '../../../public/webpack-icon.svg'
-
+import React from 'react'
+import styles from './Header.module.css'
+import { AiFillDollarCircle } from 'react-icons/ai'
+import { useFavorites } from '@/hooks/useFavorites'
 
 function Header() {
-  const [time, setTime] = useState(new Date())
-  
-  useEffect(() => {
-    const timerId = setInterval(() => tick(), 1000)
-    return () => clearInterval(timerId)
-  }, [])
-  
-  function tick() {
-    setTime(new Date())
-  }
-  
+ const {favorites} = useFavorites()
+
   return (
     <header className={styles.header}>
-      <img src={logo} alt={'Studying'} />
-      <span>Время сейчас: {time.toLocaleTimeString()}</span>
+      <AiFillDollarCircle className={styles.icon}/>
+      <span>{favorites.length}</span>
     </header>
   )
 }

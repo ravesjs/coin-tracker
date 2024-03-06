@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header/Header'
-import Button from './components/ui/Button/Button'
 import styles from 'styles/_styles.module.scss'
+import CryptoCoin from './components/crypto-coin/CryptoCoin'
 
 function App() {
   return (
@@ -9,12 +9,19 @@ function App() {
       <Header />
       <main className={styles.main}>
         <section>
-          <h3>Что такое компот?</h3>
-          <Button>Не знаю</Button>
-          <Button>Знаю</Button>
-          <Button>А</Button>
+        <CryptoCoin coin={{
+          id: 1,
+          name: 'Bitcoin'
+        }}/>
+        <CryptoCoin coin={{
+          id: 2,
+          name: 'Ethereum'
+        }}/>
+        <CryptoCoin coin={{
+          id: 3,
+          name: 'Cardano'
+        }}/>
         </section>
-        <br />
       </main>
     </>
   )
