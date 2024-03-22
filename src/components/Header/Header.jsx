@@ -1,14 +1,15 @@
 import React from 'react'
 import styles from './Header.module.css'
-import { AiFillDollarCircle } from 'react-icons/ai'
+import CurrencyBitcoinRoundedIcon from '@mui/icons-material/CurrencyBitcoinRounded';
 import { useFavorites } from '@/hooks/useFavorites'
 
 function Header() {
- const {favorites} = useFavorites()
+  const { favorites } = useFavorites()
 
   return (
+    
     <header className={styles.header}>
-      <AiFillDollarCircle className={styles.icon}/>
+      <CurrencyBitcoinRoundedIcon className={styles.icon}/>
       <span>{favorites.length}</span>
     </header>
   )

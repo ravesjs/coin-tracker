@@ -8,17 +8,25 @@
   justify-content: flex-start;
   align-items: center;
   height: 60px;
+  color: #fff;
   background-color: #000000;
-  color: #33d9d1;
-  border-bottom: 3px solid white;
   padding: 0 20px;
   > span {
-    font-size: 15px;
+    border-radius: 4px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1px;
+    padding-top: 1px;
+    font-size: 14px;
+    background-color: #28b8db;
+    position: absolute;
+    bottom: 10px;
+    left: 55px;
   }
 }
 .icon {
-  margin-right: 10px;
-  width: 50px;
-  height: 50px;
   color: #d6ab46;
 }
