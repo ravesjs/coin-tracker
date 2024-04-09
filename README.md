@@ -1,11 +1,10 @@
-# 📦 Webpack, scss-modules, postcss, babel, eslint, prettier configuration, React-ready template.
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# Тестовое PushKeen
 
 ## Instruction
 
 1. Clone this repo 
     ```bash
-    git clone https://github.com/ravesjs/config-webpack-etc
+    git clone https://github.com/ravesjs/test-task
     ```
      
 2.  Delete old link (of this repo)
@@ -52,9 +51,3 @@
     ```bash
     npm run build
     ```
-
-- props to [Tania Rascia](https://github.com/taniarascia), I've updated [this](https://github.com/taniarascia/webpack-boilerplate) config for React and scss.modules
-
-  ## License
-
-  This project is open source and available under the [MIT License](LICENSE).
