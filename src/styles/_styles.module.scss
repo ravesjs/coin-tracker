@@ -3,5 +3,11 @@
 }
 
 .main {
-  padding-top: 60px;
+  margin-top: 80px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
 }

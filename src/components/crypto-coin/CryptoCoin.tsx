@@ -1,15 +1,21 @@
 import { useActions } from '@/hooks/useActions'
 import { useFavorites } from '@/hooks/useFavorites'
 import { Rating } from '@mui/material'
-import React from 'react'
+import React, { FC } from 'react'
 import styles from './CryptoCoin.module.css'
-export default function CryptoCoin({ coin }) {
+
+interface ICoin {
+  name: string
+  id: number
+}
+
+const CryptoCoin: FC<{ coin: ICoin }> = ({ coin }) => {
   const { favorites } = useFavorites()
 
   const { toggleFavorites } = useActions()
-  const isExists = favorites.some((c) => c.id === coin.id)
+  const isExists = favorites.some((c: ICoin) => c.id === coin.id)
 
-  const handleChange = (value) => {
+  const handleChange = (value: number | null) => {
     toggleFavorites(coin)
   }
   console.log(favorites)
@@ -27,3 +33,5 @@ export default function CryptoCoin({ coin }) {
     </div>
   )
 }
+
+export default CryptoCoin
