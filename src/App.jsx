@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header/Header'
 import styles from 'styles/_styles.module.scss'
-import CryptoCoin from './components/crypto-coin/CryptoCoin'
+import Favorites from 'pages/FavoritesPage'
 
 function App() {
   return (
@@ -10,24 +10,7 @@ function App() {
       <main className={styles.main}>
         <h2># Name</h2>
         <section>
-          <CryptoCoin
-            coin={{
-              id: 1,
-              name: 'Bitcoin',
-            }}
-          />
-          <CryptoCoin
-            coin={{
-              id: 2,
-              name: 'Ethereum',
-            }}
-          />
-          <CryptoCoin
-            coin={{
-              id: 3,
-              name: 'Cardano',
-            }}
-          />
+          <Favorites />
         </section>
       </main>
     </>

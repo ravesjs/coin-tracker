@@ -4,12 +4,12 @@ import { Rating } from '@mui/material'
 import React, { FC } from 'react'
 import styles from './CryptoCoin.module.css'
 
-interface ICoin {
+export interface ICoin {
   name: string
   id: number
 }
 
-const CryptoCoin: FC<{ coin: ICoin }> = ({ coin }) => {
+export const CryptoCoin: FC<ICoin> = (coin) => {
   const { favorites } = useFavorites()
 
   const { toggleFavorites } = useActions()
@@ -25,7 +25,7 @@ const CryptoCoin: FC<{ coin: ICoin }> = ({ coin }) => {
         name={`rating-${coin.id}`}
         value={isExists ? 1 : 0}
         max={1}
-        onChange={(event, value) => {
+        onChange={(e, value) => {
           handleChange(value)
         }}
       />
@@ -33,5 +33,3 @@ const CryptoCoin: FC<{ coin: ICoin }> = ({ coin }) => {
     </div>
   )
 }
-
-export default CryptoCoin
