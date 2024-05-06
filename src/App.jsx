@@ -1,19 +1,17 @@
 import React from 'react'
-import Header from './components/Header/Header'
 import styles from 'styles/_styles.module.scss'
+import Home from './pages/HomePage'
 import Favorites from 'pages/FavoritesPage'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <>
-      <Header />
-      <main className={styles.main}>
-        <h2># Name</h2>
-        <section>
-          <Favorites />
-        </section>
-      </main>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/favorites" element={<Favorites />} />
+      </Routes>
+    </Router>
   )
 }
 
