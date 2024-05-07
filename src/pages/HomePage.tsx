@@ -1,20 +1,18 @@
 import React from 'react'
 import Header from '@/components/Header/Header'
 import styles from '@/styles/index.scss'
-import Favorites from './FavoritesPage'
+import Coins from '../components/Coins/Coins'
 
-const Home = () => {
-  return (
+const Home = () => (
     <>
       <Header />
       <main className={styles.main}>
         <h2># Name</h2>
         <section>
-					<Favorites />
-				</section>
+          <Coins />
+        </section>
       </main>
     </>
   )
-}
 
 export default Home
