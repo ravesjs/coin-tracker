@@ -4,7 +4,9 @@ html {
   font-family: $font-family;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -14,5 +16,8 @@ img {
 }
 
 body {
-  background-color: rgb(196, 196, 196);
+  background-color: #ffffff;
+  background-image: url('../../public/subtle-prism.png');
+  background-attachment: fixed;
+  background-size: cover;
 }
