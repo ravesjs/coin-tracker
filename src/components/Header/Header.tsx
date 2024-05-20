@@ -1,21 +1,29 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 import CurrencyBitcoinRoundedIcon from '@mui/icons-material/CurrencyBitcoinRounded'
 import { useFavorites } from '@/hooks/useFavorites'
 
-const Header: FC = (coin): ReactNode => {
+const Header: FC = (): ReactNode => {
   const { favorites } = useFavorites()
 
   return (
     <header className={styles.header}>
-      <Link to="/favorites">
-        <CurrencyBitcoinRoundedIcon className={styles.icon} sx={{ fontSize: 45 }} />
-      </Link>
-      <span className={favorites.length >= 1 ? styles.counter : ''}>
-        {favorites.length >= 1 ? favorites.length : ''}
-      </span>
+      <nav>
+        <ul>
+          <li>
+            <CurrencyBitcoinRoundedIcon className={styles.icon} sx={{ fontSize: 45 }} />
+          </li>
+          <Link to="/favorites">
+            <li>Portfolio</li>
+          </Link>
+          <li>Top</li>
+        </ul>
+        <span className={favorites.length >= 1 ? styles.counter : ''}>
+          {favorites.length >= 1 ? favorites.length : ''}
+        </span>
+      </nav>
     </header>
   )
 }
