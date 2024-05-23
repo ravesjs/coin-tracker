@@ -1,22 +1,35 @@
-import React, { FC } from 'react'
-import { CryptoCoin } from '@/components/crypto-coin/CryptoCoin'
+import React, { useState, useEffect, FC } from 'react'
+import { CryptoCoin, ICoin } from '@/components/crypto-coin/CryptoCoin'
+import axios from 'axios'
 
-interface ICoins {
-  id: number
-  name: string
+const options = {
+  method: 'GET',
+  url: 'https://api.coingecko.com/api/v3/coins/markets',
+  params: { vs_currency: 'usd', locale: 'en' },
+  headers: { accept: 'application/json' },
 }
-const coins: ICoins[] = [
-  { id: 1, name: 'Bitcoin' },
-  { id: 2, name: 'Ethereum' },
-  { id: 3, name: 'Cardano' },
-]
 
-const Coins: FC = () => (
+// TODO: typify to fix dep components
+const Coins: FC = () => {
+  const [coins, setCoins] = useState<ICoin[]>([])
+  useEffect(() => {
+    axios
+      .request(options)
+      .then(function (response) {
+        setCoins(response.data)
+      })
+      .catch(function (error) {
+        console.error('Failed to get coins', error)
+      })
+  }, [])
+
+  return (
     <>
-      {coins.map((coin) => (
-        <CryptoCoin key={coin.id} id={coin.id} name={coin.name} />
+      {coins.map((coin: ICoin) => (
+        <CryptoCoin key={coin.id} id={coin.id} />
       ))}
     </>
   )
+}
 
 export default Coins

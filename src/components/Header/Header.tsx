@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
@@ -15,10 +14,12 @@ const Header: FC = (): ReactNode => {
           <li>
             <CurrencyBitcoinRoundedIcon className={styles.icon} sx={{ fontSize: 45 }} />
           </li>
+          <Link to="/">
+            <li>Top</li>
+          </Link>
           <Link to="/favorites">
             <li>Portfolio</li>
           </Link>
-          <li>Top</li>
         </ul>
         <span className={favorites.length >= 1 ? styles.counter : ''}>
           {favorites.length >= 1 ? favorites.length : ''}

@@ -2,12 +2,23 @@
   text-align: center;
 }
 
-.main {
-  margin-top: 80px;
-}
-
 .container {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70px;
+}
+
+i {
+  margin-right: 50px;
+  margin-left: 28px;
+}
+
+.marginUp {
+  margin-top: 80px;
 }

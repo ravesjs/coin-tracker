@@ -5,8 +5,11 @@ import React, { FC } from 'react'
 import styles from './CryptoCoin.module.css'
 
 export interface ICoin {
+  id: string
   name: string
-  id: number
+  image: string
+  current_price: number
+  market_cap_rank: number
 }
 
 export const CryptoCoin: FC<ICoin> = (coin) => {
@@ -29,7 +32,10 @@ export const CryptoCoin: FC<ICoin> = (coin) => {
           handleChange(value)
         }}
       />
-      <h3>{coin.name}</h3>
+      <span>{coin.market_cap_rank}</span>
+      <img src={coin.image} alt={coin.name} />
+      <h4>{coin.name}</h4>
+      <span>{coin.current_price}$</span>
     </div>
   )
 }
