@@ -8,7 +8,7 @@ const Home = () => (
     <Header />
     <main className={styles.main}>
       <div className={styles.wrap}>
-      <h2><i>#</i>Name</h2><h2>Price</h2>
+      <h2><i>#</i>Name</h2>
       </div>
       <section>
         <Coins />

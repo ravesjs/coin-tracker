@@ -26,7 +26,7 @@ const Coins: FC = () => {
   return (
     <>
       {coins.map((coin: ICoin) => (
-        <CryptoCoin key={coin.id} id={coin.id} />
+        <CryptoCoin key={coin.id} {...coin} />
       ))}
     </>
   )
