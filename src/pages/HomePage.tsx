@@ -1,19 +1,17 @@
 import React from 'react'
-import Header from '@/components/Header/Header'
 import styles from '@/styles/index.scss'
-import Coins from '../components/Coins/Coins'
+import Coins from '@/components/Coins/Coins'
 
 const Home = () => (
   <>
-    <Header />
-    <main className={styles.main}>
-      <div className={styles.wrap}>
-      <h2><i>#</i>Name</h2>
-      </div>
-      <section>
-        <Coins />
-      </section>
-    </main>
+    <div className={styles.wrap}>
+      <h2>
+        <i>#</i>Name
+      </h2>
+    </div>
+    <section>
+      <Coins />
+    </section>
   </>
 )
 
