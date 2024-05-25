@@ -14,11 +14,10 @@ export interface ICoin {
 
 export const CryptoCoin: FC<ICoin> = (coin) => {
   const { favorites } = useFavorites()
-
   const { toggleFavorites } = useActions()
   const isExists = favorites.some((c: ICoin) => c.id === coin.id)
 
-  const handleChange = (value: number | null) => {
+  const handleChange = () => {
     toggleFavorites(coin)
   }
   console.log(favorites)
@@ -28,8 +27,8 @@ export const CryptoCoin: FC<ICoin> = (coin) => {
         name={`rating-${coin.id}`}
         value={isExists ? 1 : 0}
         max={1}
-        onChange={(e, value) => {
-          handleChange(value)
+        onChange={() => {
+          handleChange()
         }}
       />
       <span>{coin.market_cap_rank}</span>
