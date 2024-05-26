@@ -8,12 +8,12 @@ const Header: FC = (): ReactNode => {
   const { favorites } = useFavorites()
 
   return (
-    <div>
+    <>
       <header className={styles.header}>
         <nav>
           <ul>
             <li>
-              <CurrencyBitcoinRoundedIcon className={styles.icon} sx={{ fontSize: 45 }} />
+              <CurrencyBitcoinRoundedIcon sx={{ fontSize: 45, color: '#d6ab46' }} />
             </li>
             <Link to="/">
               <li>Top</li>
@@ -30,7 +30,7 @@ const Header: FC = (): ReactNode => {
       <main className={styles.main}>
         <Outlet />
       </main>
-    </div>
+    </>
   )
 }
 
