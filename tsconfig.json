@@ -9,7 +9,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
