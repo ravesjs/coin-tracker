@@ -1,8 +1,9 @@
+/* eslint-disable camelcase */
 import { useActions } from '@/hooks/useActions'
 import { useFavorites } from '@/hooks/useFavorites'
 import { Rating } from '@mui/material'
 import React, { FC } from 'react'
-import styles from './CryptoCoin.module.css'
+import styles from './Coin.module.css'
 
 export interface ICoin {
   id: string
@@ -12,29 +13,30 @@ export interface ICoin {
   market_cap_rank: number
 }
 
-export const CryptoCoin: FC<ICoin> = (coin) => {
+export const Coin: FC<ICoin> = (coin) => {
   const { favorites } = useFavorites()
   const { toggleFavorites } = useActions()
+  const { id, name, image, current_price, market_cap_rank } = coin
   const isExists = favorites.some((c: ICoin) => c.id === coin.id)
 
   const handleChange = () => {
     toggleFavorites(coin)
   }
-  console.log(favorites)
+  
   return (
     <div className={styles.container}>
       <Rating
-        name={`rating-${coin.id}`}
+        name={`rating-${id}`}
         value={isExists ? 1 : 0}
         max={1}
         onChange={() => {
           handleChange()
         }}
       />
-      <span>{coin.market_cap_rank}</span>
-      <img src={coin.image} alt={coin.name} />
-      <h4>{coin.name}</h4>
-      <span>{coin.current_price}$</span>
+      <span>{market_cap_rank}</span>
+      <img src={image} alt={name} />
+      <h4>{name}</h4>
+      <span>{current_price}$</span>
     </div>
   )
 }

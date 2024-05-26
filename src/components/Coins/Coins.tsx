@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FC } from 'react'
-import { CryptoCoin, ICoin } from '@/components/crypto-coin/CryptoCoin'
+import { Coin, ICoin } from '@/components/Coin/Coin'
 import axios from 'axios'
 
 const options = {
@@ -26,7 +26,7 @@ const Coins: FC = () => {
   return (
     <>
       {coins.map((coin: ICoin) => (
-        <CryptoCoin key={coin.id} {...coin} />
+        <Coin key={coin.id} {...coin} />
       ))}
     </>
   )

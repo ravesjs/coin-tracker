@@ -1,10 +1,11 @@
 import React, { FC } from 'react'
-import { CryptoCoin, ICoin } from '@/components/crypto-coin/CryptoCoin'
+import { Coin, ICoin } from '@/components/Coin/Coin'
 import { useFavorites } from '@/hooks/useFavorites'
 import styles from '@/styles/_styles.module.scss'
 
-const Favorites: FC<ICoin> = () => {
+const Favorites: FC = () => {
   const { favorites } = useFavorites()
+  const sorted = [...favorites].sort((a, b) => a.market_cap_rank - b.market_cap_rank)
 
   return (
     <div className={styles.marginUp}>
@@ -14,8 +15,8 @@ const Favorites: FC<ICoin> = () => {
         </h2>
         <h2>Price</h2>
       </div>
-      {favorites.map((coin: ICoin) => (
-        <CryptoCoin key={coin.id} {...coin} />
+      {sorted.map((coin: ICoin) => (
+        <Coin key={coin.id} {...coin} />
       ))}
     </div>
   )
