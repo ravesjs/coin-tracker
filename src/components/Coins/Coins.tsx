@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Coin, ICoin } from '@/components/Coin/Coin'
 import axios from 'axios'
 
@@ -10,7 +10,7 @@ const options = {
 }
 
 // TODO: typify to fix dep components
-const Coins: FC = () => {
+const Coins = function() {
   const [coins, setCoins] = useState<ICoin[]>([])
   useEffect(() => {
     axios

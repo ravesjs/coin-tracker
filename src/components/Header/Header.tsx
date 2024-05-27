@@ -4,7 +4,7 @@ import styles from './Header.module.scss'
 import CurrencyBitcoinRoundedIcon from '@mui/icons-material/CurrencyBitcoinRounded'
 import { useFavorites } from '@/hooks/useFavorites'
 
-const Header: FC = (): ReactNode => {
+function Header(): ReactNode {
   const { favorites } = useFavorites()
 
   return (

@@ -3,7 +3,7 @@ import { Coin, ICoin } from '@/components/Coin/Coin'
 import { useFavorites } from '@/hooks/useFavorites'
 import styles from '@/styles/_styles.module.scss'
 
-const Favorites: FC = () => {
+function Favorites () {
   const { favorites } = useFavorites()
   const sorted = [...favorites].sort((a, b) => a.market_cap_rank - b.market_cap_rank)
 

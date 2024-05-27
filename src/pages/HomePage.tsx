@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from '@/styles/index.scss'
+import styles from '@/styles/_styles.module.scss'
 import Coins from '@/components/Coins/Coins'
 
-const Home = () => (
+function Home() {
   <>
     <div className={styles.wrap}>
       <h2>
@@ -13,6 +13,6 @@ const Home = () => (
       <Coins />
     </section>
   </>
-)
+}
 
 export default Home
