@@ -7,8 +7,8 @@ const Layout = (props: any) => {
   return (
     <table>
       <thead className={styles.marginUp}>
-        <tr>
-          <th className={styles.wrap}>
+        <tr className={styles.wrap}>
+          <th>
             <h2>
               <i>#</i>Name
             </h2>
