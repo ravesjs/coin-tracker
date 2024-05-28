@@ -1,0 +1,18 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70px;
+}
+.marginUp {
+  margin-top: 80px;
+}
+
+i {
+  margin-right: 105px;
+  margin-left: 38px;
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Coin, ICoin } from '@/components/Coin/Coin'
 import axios from 'axios'
+import Layout from '@/pages/Layout'
 
 const options = {
   method: 'GET',
@@ -10,7 +11,7 @@ const options = {
 }
 
 // TODO: typify to fix dep components
-const Coins = function() {
+const Coins = function () {
   const [coins, setCoins] = useState<ICoin[]>([])
   useEffect(() => {
     axios
@@ -24,11 +25,11 @@ const Coins = function() {
   }, [])
 
   return (
-    <>
+    <Layout>
       {coins.map((coin: ICoin) => (
         <Coin key={coin.id} {...coin} />
       ))}
-    </>
+    </Layout>
   )
 }
 

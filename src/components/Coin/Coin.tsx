@@ -24,7 +24,8 @@ export const Coin: FC<ICoin> = (coin) => {
   }
   
   return (
-    <div className={styles.container}>
+    <tr className={styles.container}>
+      <td>
       <Rating
         name={`rating-${id}`}
         value={isExists ? 1 : 0}
@@ -33,10 +34,11 @@ export const Coin: FC<ICoin> = (coin) => {
           handleChange()
         }}
       />
-      <span>{market_cap_rank}</span>
-      <img src={image} alt={name} />
-      <h4>{name}</h4>
-      <span>{current_price}$</span>
-    </div>
+      </td>
+      <td><p>{market_cap_rank}</p></td>
+      <td><img src={image} alt={name} /></td>
+      <td><h4>{name}</h4></td>
+      <td><p>{current_price}$</p></td>
+    </tr>
   )
 }
