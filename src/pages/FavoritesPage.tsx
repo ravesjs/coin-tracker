@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import { Coin, ICoin } from '@/components/Coin/Coin'
+import React from 'react'
+import { Coin } from '@/components/Coin/Coin'
 import { useFavorites } from '@/hooks/useFavorites'
 import styles from '@/styles/_styles.module.scss'
 
@@ -15,7 +15,7 @@ function Favorites () {
         </h2>
         <h2>Price</h2>
       </div>
-      {sorted.map((coin: ICoin) => (
+      {sorted.map((coin) => (
         <Coin key={coin.id} {...coin} />
       ))}
     </div>

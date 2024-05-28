@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import styles from './Header.module.scss'
 import CurrencyBitcoinRoundedIcon from '@mui/icons-material/CurrencyBitcoinRounded'
@@ -6,6 +6,7 @@ import { useFavorites } from '@/hooks/useFavorites'
 
 function Header(): ReactNode {
   const { favorites } = useFavorites()
+  const moreThanOne = favorites.length >= 1
 
   return (
     <>
@@ -22,8 +23,8 @@ function Header(): ReactNode {
               <li>Portfolio</li>
             </Link>
           </ul>
-          <span className={favorites.length >= 1 ? styles.counter : ''}>
-            {favorites.length >= 1 ? favorites.length : ''}
+          <span className={moreThanOne ? styles.counter : ''}>
+            {moreThanOne && favorites.length}
           </span>
         </nav>
       </header>
