@@ -10,10 +10,9 @@ const Layout = (props: any) => {
         <col style={{width: '20px', minWidth: 'auto', maxWidth: 'auto'}}/>
         <col style={{width: '20px', minWidth: 'auto', maxWidth: 'auto'}}/>
         <col style={{width: '20px', minWidth: 'auto', maxWidth: 'auto'}}/>
-        <col style={{width: '30px', minWidth: 'auto', maxWidth: 'auto'}}/>
       </colgroup>
       <thead className={styles.marginUp}>
-        <tr className={styles.wrap}>
+        <tr>
           <th></th>
           <th><h2>#</h2></th>
           <th></th>
