@@ -7,13 +7,15 @@ table {
   width: 300px;
 }
 
-td:not(:nth-child(4)) {
+td:not(:nth-child(4), :nth-child(5)) {
   text-align: center;
 }
 td {
   border-top: 1px solid rgb(59, 55, 55);
 }
-.alignStart {
-  text-align: start;
+th:nth-child(4) {
+  padding-right: 44px;
+}
+th:nth-child(5) {
   padding-right: 44px;
 }

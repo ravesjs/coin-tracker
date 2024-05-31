@@ -15,9 +15,9 @@ const Layout = (props: any) => {
       <thead className={styles.marginUp}>
         <tr className={styles.wrap}>
           <th></th>
-          <th>#</th>
+          <th><h2>#</h2></th>
           <th></th>
-          <th className={styles.alignStart}>
+          <th>
             <h2>
               Name
             </h2>
