@@ -1,7 +1,7 @@
 import React from 'react'
 import { Coin } from '@/components/Coin/Coin'
 import { useFavorites } from '@/hooks/useFavorites'
-import Layout from './Layout'
+import Layout from './Layout/Layout'
 
 function Favorites() {
   const { favorites } = useFavorites()

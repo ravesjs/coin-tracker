@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Coin, ICoin } from '@/components/Coin/Coin'
 import axios from 'axios'
-import Layout from '@/pages/Layout'
+import Layout from '@/pages/Layout/Layout'
 
 const options = {
   method: 'GET',
   url: 'https://api.coingecko.com/api/v3/coins/markets',
   params: { vs_currency: 'usd', locale: 'en' },
-  headers: { accept: 'application/json' },
+  headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-uyjDvrr6SRJ5djBo4D8x1dRB' },
 }
 
 // TODO: typify to fix dep components
