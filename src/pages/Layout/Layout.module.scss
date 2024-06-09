@@ -1,0 +1,21 @@
+.marginUp {
+  margin-top: 80px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 550px;
+}
+
+td:not(:nth-child(4), :nth-child(5)) {
+  text-align: center;
+}
+td {
+  border-top: 1px solid rgb(59, 55, 55);
+}
+th:nth-child(4) {
+  padding-right: 300px;
+}
+th:nth-child(5) {
+  padding-right: 44px;
+}

@@ -1,0 +1,17 @@
+.container {
+  td {
+    padding: 6px;
+  }
+  td > p {
+    font-size: 1.1rem;
+  }
+  td > h4 {
+    white-space: nowrap;
+  }
+  :first-child {
+    padding-top: 2px;
+  }
+}
+.yellow {
+	background-color: yellow;
+}

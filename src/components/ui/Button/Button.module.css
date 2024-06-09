@@ -1,0 +1,17 @@
+.button {
+  padding: 0.8rem 2rem;
+  margin-right: 1rem;
+  background-color: rgb(92, 251, 190);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:active {
+    color: #fff;
+    background: blue;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

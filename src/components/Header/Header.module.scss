@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  background-color: #000000;
+  z-index: 1;
+}
+
+.counter {
+  text-align: center;
+  border-radius: 0.2rem;
+  width: 12px;
+  height: 12px;
+  font-size: 11px;
+  background-color: #26aac2;
+  position: absolute;
+  bottom: 15px;
+  left: 273px;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  right: 15px;
+  bottom: 10px;
+  li {
+    margin-right: 50px;
+    font-size: 20px;
+    color: rgb(148, 29, 253);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
