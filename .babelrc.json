@@ -1,4 +1,16 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "babel-plugin-module-resolver",
+      {
+        "alias": {
+          "^effector$": "effector/compat",
+          "^effector-react$": "effector-react/compat"
+        }
+      }
+    ],
+    ["effector/babel-plugin", { "addLoc": true }]
+  ]
 }

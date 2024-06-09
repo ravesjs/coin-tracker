@@ -1,9 +1,9 @@
 /* eslint-disable camelcase */
-import { useActions } from '@/hooks/useActions'
-import { useFavorites } from '@/hooks/useFavorites'
 import { Rating } from '@mui/material'
 import React, { FC } from 'react'
 import styles from './Coin.module.css'
+import { useFavorites } from '@/hooks/useFavorites'
+import { toggleFavorites } from '@/services/providers/favorites/favorites'
 
 export interface ICoin {
   id: string
@@ -15,11 +15,10 @@ export interface ICoin {
 
 export const Coin: FC<ICoin> = (coin) => {
   const { favorites } = useFavorites()
-  const { toggleFavorites } = useActions()
   const { id, name, image, current_price, market_cap_rank } = coin
   const isExists = favorites.some((c: ICoin) => c.id === coin.id)
 
-  const handleChange = () => {
+  const onFav = () => {
     toggleFavorites(coin)
   }
   
@@ -30,9 +29,7 @@ export const Coin: FC<ICoin> = (coin) => {
         name={`rating-${id}`}
         value={isExists ? 1 : 0}
         max={1}
-        onChange={() => {
-          handleChange()
-        }}
+        onChange={onFav}
       />
       </td>
       <td><p>{market_cap_rank}</p></td>

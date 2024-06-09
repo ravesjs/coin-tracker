@@ -1,9 +1,7 @@
-import { useSelector, TypedUseSelectorHook } from 'react-redux'
-import {RootState} from '@/services/providers/store'
+import { useUnit } from 'effector-react'
+import { $favorites } from '@/services/providers/favorites/favorites'
 
-export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 export const useFavorites = () => {
-  const favorites = useAppSelector((state: RootState) => state.favorites)
-
+  const favorites = useUnit($favorites)
   return { favorites }
 }

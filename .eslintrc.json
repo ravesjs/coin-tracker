@@ -22,7 +22,7 @@
   "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended", "prettier", "plugin:@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
