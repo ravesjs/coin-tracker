@@ -65,6 +65,5 @@ module.exports = {
       '@': paths.src,
       assets: paths.public,
     },
-    plugins: [new TsconfigPathsPlugin({ configFile: "../webpack/tsconfig.json" })],
   },
 }
