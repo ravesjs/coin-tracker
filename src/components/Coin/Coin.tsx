@@ -18,7 +18,7 @@ export const Coin: FC<ICoin> = (coin) => {
   const { id, name, image, current_price, market_cap_rank } = coin
   const isExists = favorites.some((c: ICoin) => c.id === coin.id)
 
-  const onFav = () => {
+  const onFavorite = () => {
     toggleFavorites(coin)
   }
   
@@ -29,7 +29,7 @@ export const Coin: FC<ICoin> = (coin) => {
         name={`rating-${id}`}
         value={isExists ? 1 : 0}
         max={1}
-        onChange={onFav}
+        onChange={onFavorite}
       />
       </td>
       <td><p>{market_cap_rank}</p></td>
