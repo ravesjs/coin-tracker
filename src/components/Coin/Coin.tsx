@@ -2,8 +2,8 @@
 import { Rating } from '@mui/material'
 import React, { FC } from 'react'
 import styles from './Coin.module.css'
-import { useFavorites } from '@/hooks/useFavorites'
-import { toggleFavorites } from '@/services/providers/favorites/favorites'
+import { toggleFavorites, $favorites } from '@/services/providers/favorites/favorites'
+import { useUnit } from 'effector-react'
 
 export interface ICoin {
   id: string
@@ -14,7 +14,7 @@ export interface ICoin {
 }
 
 export const Coin: FC<ICoin> = (coin) => {
-  const { favorites } = useFavorites()
+  const favorites = useUnit($favorites)
   const { id, name, image, current_price, market_cap_rank } = coin
   const isExists = favorites.some((c: ICoin) => c.id === coin.id)
 

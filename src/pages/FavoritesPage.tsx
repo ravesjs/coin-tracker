@@ -1,10 +1,11 @@
 import React from 'react'
 import { Coin } from '@/components/Coin/Coin'
-import { useFavorites } from '@/hooks/useFavorites'
 import Layout from './Layout/Layout'
+import { $favorites } from '@/services/providers/favorites/favorites'
+import { useUnit } from 'effector-react'
 
 function Favorites() {
-  const { favorites } = useFavorites()
+  const favorites = useUnit($favorites)
   const sorted = [...favorites].sort((a, b) => a.market_cap_rank - b.market_cap_rank)
 
   return (
