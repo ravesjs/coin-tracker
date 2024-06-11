@@ -67,6 +67,5 @@ module.exports = {
       "^effector$": "effector/compat",
       "^effector-react$": "effector-react/compat",
     },
-    plugins: [new TsconfigPathsPlugin({ configFile: "../effector-test/tsconfig.json" })],
   }
 }
