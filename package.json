@@ -1,7 +1,7 @@
 {
-  "name": "coin-tracker",
+  "name": "effector-test",
   "version": "1.0.0",
-  "description": "tracker",
+  "description": "effector-test",
   "main": "index.tsx",
   "author": "ravesjs",
   "license": "ISC",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ravesjs/coin-tracker"
+    "url": "git@github.com:ravesjs/effector-test"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.1",
