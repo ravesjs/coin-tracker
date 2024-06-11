@@ -64,7 +64,9 @@ module.exports = {
     alias: {
       '@': paths.src,
       assets: paths.public,
+      "^effector$": "effector/compat",
+      "^effector-react$": "effector-react/compat",
     },
     plugins: [new TsconfigPathsPlugin({ configFile: "../effector-test/tsconfig.json" })],
-  },
+  }
 }
