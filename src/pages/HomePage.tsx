@@ -4,9 +4,7 @@ import Coins from '@/components/Coins/Coins'
 function Home() {
   return (
     <>
-      <section>
-          <Coins />
-      </section>
+      <Coins />
     </>
   )
 }

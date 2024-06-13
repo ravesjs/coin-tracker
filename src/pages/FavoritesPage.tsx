@@ -1,7 +1,7 @@
 import React from 'react'
 import { Coin } from '@/components/Coin/Coin'
 import Layout from './Layout/Layout'
-import { $favorites } from '@/services/providers/favorites/favorites'
+import { $favorites } from '@/services/providers/model'
 import { useUnit } from 'effector-react'
 
 function Favorites() {
