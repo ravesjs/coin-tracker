@@ -1,21 +1,21 @@
 import { ICoin } from '@/components/Coin/Coin'
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState: any[]  = []
+const initialState: ICoin[]  = []
 
 export const favoritesSlice = createSlice({
   name: 'favorites',
   initialState,
   reducers: {
-    toggleFavorites: (state, { payload: crypto }) => {
-      const isExists = state.some((c: ICoin) => c.id === crypto.id)
+    toggleFavorites: (state, { payload: coin }) => {
+      const isExists = state.some((c) => c.id === coin.id)
       if (isExists) {
-        const index = state.findIndex((c: ICoin) => c.id === crypto.id)
+        const index = state.findIndex((c) => c.id === coin.id)
         if (index !== -1) {
           state.splice(index, 1)
         }
       } else {
-        state.push(crypto)
+        state.push(coin)
       }
     },
   },
