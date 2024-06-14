@@ -13,7 +13,7 @@
     "import/no-extraneous-dependencies": ["off", { "devDependencies": false }],
     "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }]
   },
-  "ignorePatterns": ["dist", "node_modules", "webpack.*", "config/paths.js"],
+  "ignorePatterns": ["dist", "node_modules", "webpack.*", "config/paths.ts"],
   "env": {
     "browser": true,
     "es6": true,
@@ -32,7 +32,7 @@
   "settings": {
     "import/resolver": {
       "webpack": {
-        "config": "config/webpack.common.js"
+        "config": "config/webpack.common.ts"
       }
     }
   }
