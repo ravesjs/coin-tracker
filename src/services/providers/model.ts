@@ -2,7 +2,7 @@
 import { createEvent, createStore } from 'effector'
 import { ICoin } from '@/components/Coin/Coin'
 
-const initialState: any[] = []
+const initialState: ICoin[] = []
 
 export const toggleFavorites = createEvent<ICoin>()
 
