@@ -1,9 +1,9 @@
 import common from  './webpack.common'
 import { merge } from 'webpack-merge'
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
-import type { Configuration as WebpackConfiguration } from 'webpack'
+import type { Configuration } from 'webpack'
 
-const dev: WebpackConfiguration = {
+const dev: Configuration = {
   // Set the mode to development or production
   mode: 'development',
 
