@@ -4,13 +4,8 @@ import type { Configuration as DevServerConfiguration } from 'webpack-dev-server
 import type { Configuration } from 'webpack'
 
 const dev: Configuration =  {
-  // Set the mode to development or production
   mode: 'development',
-
-  // Control how source maps are generated
   devtool: 'inline-source-map',
-
-  // Spin up a server for quick development
   devServer: {
     historyApiFallback: true,
     open: true,
@@ -20,7 +15,6 @@ const dev: Configuration =  {
   } as DevServerConfiguration,
   module: {
     rules: [
-      // Styles: Inject CSS into the head with source maps
       {
         test: /\.(sass|scss|css)$/i,
         use: [
