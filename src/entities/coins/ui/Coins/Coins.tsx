@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Coin, ICoin } from '@/entities/coin/index'
+import { Coin, ICoin } from '@/entities/coin'
 import axios from 'axios'
 
 const options = {
