@@ -1,14 +1,14 @@
 /* eslint-disable camelcase */
-import { Rating } from '@mui/material'
+import { Rate } from "antd";
 import React, { FC } from 'react'
 import styles from './Coin.module.css'
 import { toggleFavorites, $favorites } from '@/shared/store/model'
 import { useUnit } from 'effector-react'
-import { ICoin } from '@/entities/coin/index'
+import { ICoin } from '@/entities/coin'
 
 export const Coin: FC<ICoin> = (coin) => {
   const favorites = useUnit($favorites)
-  const { id, name, image, current_price, market_cap_rank } = coin
+  const { name, image, current_price, market_cap_rank } = coin
   const isExists = favorites.some((c: ICoin) => c.id === coin.id)
 
   const onFavorite = () => {
@@ -18,7 +18,7 @@ export const Coin: FC<ICoin> = (coin) => {
   return (
     <tr className={styles.container}>
       <td>
-        <Rating name={`rating-${id}`} value={isExists ? 1 : 0} max={1} onChange={onFavorite} />
+        <Rate count={1} onChange={onFavorite} value={isExists ? 1 : 0} style={{marginLeft: 25, marginTop: 17, marginRight: -60}} />
       </td>
       <td>
         <p>{market_cap_rank}</p>

@@ -1,6 +1,7 @@
 .container {
   td {
-    padding: 6px;
+    padding: 4px;
+    margin-left: 0px;
   }
   td > p {
     font-size: 1.1rem;
