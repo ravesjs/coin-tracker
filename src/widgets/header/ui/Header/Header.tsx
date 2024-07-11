@@ -1,30 +1,38 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import { Link } from 'atomic-router-react'
 import styles from './Header.module.scss'
-import CurrencyBitcoinRoundedIcon from '@mui/icons-material/CurrencyBitcoinRounded'
 import { $favorites } from '@/shared/store/model'
 import { useUnit } from 'effector-react'
 import { routes } from '@/shared/config/routing'
+import btc from '@/shared/assets/icons/btc.png'
 
 function Header(): ReactNode {
+  const [showCounter, setShowCounter] = useState(false)
   const favorites = useUnit($favorites)
-  const moreThanOne = favorites.length >= 1
 
+  useEffect(() => {
+    setShowCounter(favorites.length >= 1)
+  }, [favorites.length])
+  
   return (
     <header className={styles.header}>
       <nav>
         <ul>
           <li>
-            <CurrencyBitcoinRoundedIcon sx={{ fontSize: 45, color: '#d6ab46' }} />
+            <div className={styles.wrapper}>
+              <img src={btc} alt="btc" />
+            </div>
           </li>
           <Link to={routes.home}>
             <li>Top</li>
           </Link>
           <Link to={routes.favorites}>
-            <li>Portfolio</li>
+            <li className={styles.portfolio} >
+              Portfolio
+              {showCounter && <span className={styles.counter}>{favorites.length}</span>}
+            </li>
           </Link>
         </ul>
-        <span className={moreThanOne ? styles.counter : ''}>{moreThanOne && favorites.length}</span>
       </nav>
     </header>
   )
