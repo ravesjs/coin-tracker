@@ -7,12 +7,8 @@ import { routes } from '@/shared/config/routing'
 import btc from '@/shared/assets/icons/btc.png'
 
 function Header(): ReactNode {
-  const [showCounter, setShowCounter] = useState(false)
   const favorites = useUnit($favorites)
-
-  useEffect(() => {
-    setShowCounter(favorites.length >= 1)
-  }, [favorites.length])
+  const moreThanOne = favorites.length >= 1
   
   return (
     <header className={styles.header}>
@@ -29,7 +25,7 @@ function Header(): ReactNode {
           <Link to={routes.favorites}>
             <li className={styles.portfolio} >
               Portfolio
-              {showCounter && <span className={styles.counter}>{favorites.length}</span>}
+              {moreThanOne && <span className={styles.counter}>{favorites.length}</span>}
             </li>
           </Link>
         </ul>
