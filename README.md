@@ -5,7 +5,7 @@
 
 1. Клонируйте репозиторий 
     ```bash
-    git clone https://github.com/ravesjs/countries-app
+    git clone https://github.com/ravesjs/coin-tracker
     ```
      
     ## Установка
