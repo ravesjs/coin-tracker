@@ -1,8 +1,8 @@
 import React from 'react'
-import HomePage from '@/pages/main/index'
-import FavoritesPage from '@/pages/favorites/index'
+import HomePage from '@/pages/main'
+import FavoritesPage from '@/pages/favorites'
 import { RouterProvider, createRoutesView } from 'atomic-router-react'
-import Layout from '@/widgets/layout/index'
+import Layout from '@/widgets/layout'
 import { router, routes } from '@/shared/config/routing'
 
 

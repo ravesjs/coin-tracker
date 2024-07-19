@@ -1,3 +1,3 @@
-import Coins from './ui/Coins/Coins'
+import Coins from '@/entities/coins/ui/Coins/Coins'
 
 export default Coins

@@ -2,7 +2,7 @@
 import { Rate } from "antd";
 import React, { FC } from 'react'
 import styles from './Coin.module.css'
-import { toggleFavorites, $favorites } from '@/shared/store/model'
+import { toggleFavorites, $favorites } from '@/entities/favorites'
 import { useUnit } from 'effector-react'
 import { ICoin } from '@/entities/coin'
 
