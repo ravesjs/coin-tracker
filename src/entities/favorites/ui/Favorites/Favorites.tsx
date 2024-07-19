@@ -1,6 +1,6 @@
 import React from 'react'
 import { Coin } from '@/entities/coin'
-import { $favorites } from '@/shared/store/model'
+import { $favorites } from '@/entities/favorites'
 import { useUnit } from 'effector-react'
 
 const Favorites = () => {
