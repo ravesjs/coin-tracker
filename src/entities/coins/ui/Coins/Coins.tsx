@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import { Coin, ICoin } from '@/entities/coin'
-import axios from 'axios'
+import React from 'react'
+import { Coin } from '@/entities/coin/ui/Coin/Coin'
+import { ICoin } from '@/entities/coin'
+import { useUnit } from 'effector-react'
+import { coinsQuery } from '@/entities/coins/api'
 
-const options = {
-  method: 'GET',
-  url: 'https://api.coingecko.com/api/v3/coins/markets',
-  params: { vs_currency: 'usd', locale: 'en' },
-  headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-uyjDvrr6SRJ5djBo4D8x1dRB' },
-}
-
-// TODO: typify to fix dep components
 const Coins = function () {
-  const [coins, setCoins] = useState<ICoin[]>([])
-  useEffect(() => {
-    axios
-      .request(options)
-      .then(function (response) {
-        setCoins(response.data)
-      })
-      .catch(function (error) {
-        console.error('Failed to get coins', error)
-      })
-  }, [])
+  const coins: ICoin[] | null = useUnit(coinsQuery.$data)
+  const isLoading = useUnit(coinsQuery.$pending)
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  if (!coins) {
+    return <div>No coins available.</div>
+  }
 
   return (
     <>
