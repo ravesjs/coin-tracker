@@ -1,7 +1,10 @@
+import postcssPresetEnv from 'postcss-preset-env'
+
 export default {
-  plugins: {
-    'postcss-preset-env': {
-      browsers: 'last 2 versions',
-    },
-  },
+  plugins: [
+    postcssPresetEnv({
+      browsers: 'last 2 versions, not dead, > 0.2%',
+      features: {},
+    })
+  ]
 }
