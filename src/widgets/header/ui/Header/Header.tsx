@@ -25,7 +25,7 @@ function Header(): ReactNode {
           <Link to={routes.favorites}>
             <li className={styles.portfolio} >
               Portfolio
-              <span className={`${styles.counter} ${moreThanOne ? '' : styles.hide}`}>{favorites.length}</span>
+              {moreThanOne && <span className={styles.counter}>{favorites.length}</span>}
             </li>
           </Link>
         </ul>
