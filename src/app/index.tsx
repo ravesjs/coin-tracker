@@ -1,9 +1,9 @@
-import '@/app/styles/index.scss'
+import '@app/styles/index.scss'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import { attachLogger } from 'effector-logger'
-import { appStarted } from '@/shared/config/init'
+import { appStarted } from '@shared/config/init'
 
 attachLogger()
 

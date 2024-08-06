@@ -1,8 +1,8 @@
 import React from 'react'
-import { Coin } from '@/entities/coin/ui/Coin/Coin'
-import { ICoin } from '@/entities/coin'
+import { Coin } from '@entities/coin/ui/Coin/Coin'
+import { ICoin } from '@entities/coin'
 import { useUnit } from 'effector-react'
-import { coinsQuery } from '@/entities/coins/api'
+import { coinsQuery } from '@entities/coins/api'
 
 const Coins = function () {
   const coins: ICoin[] | null = useUnit(coinsQuery.$data)

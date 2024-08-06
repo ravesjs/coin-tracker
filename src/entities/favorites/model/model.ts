@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createEvent, createStore } from 'effector'
-import { ICoin } from '@/entities/coin/index'
+import { ICoin } from '@entities/coin/index'
 
 const initialState: ICoin[] = []
 

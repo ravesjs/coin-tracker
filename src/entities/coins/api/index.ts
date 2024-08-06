@@ -1,6 +1,6 @@
 import { createQuery } from '@farfetched/core'
 import axios from 'axios'
-import {key} from '@/entities/coins/api/key'
+import {key} from '@entities/coins/api/key'
 
 const options = {
   method: 'GET',

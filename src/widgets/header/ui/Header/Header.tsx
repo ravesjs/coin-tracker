@@ -1,10 +1,10 @@
 import React, { ReactNode} from 'react'
 import { Link } from 'atomic-router-react'
 import styles from './Header.module.scss'
-import { $favorites } from '@/entities/favorites'
+import { $favorites } from '@entities/favorites'
 import { useUnit } from 'effector-react'
-import { routes } from '@/shared/config/routing'
-import btc from '@/shared/assets/icons/btc.png'
+import { routes } from '@shared/config/routing'
+import btc from '@shared/assets/icons/btc.png'
 
 function Header(): ReactNode {
   const favorites = useUnit($favorites)
