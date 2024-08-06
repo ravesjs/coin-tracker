@@ -43,6 +43,12 @@ const common: Configuration = {
     modules: [paths.src, 'node_modules'],
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
+      '@app': paths.app,
+      '@entities': paths.entities,
+      '@features': paths.features,
+      '@pages': paths.pages,
+      '@shared': paths.shared,
+      '@widgets': paths.widgets,
       '@': paths.src,
       public: paths.public,
       // алиасы замены для поддержки браузеров
