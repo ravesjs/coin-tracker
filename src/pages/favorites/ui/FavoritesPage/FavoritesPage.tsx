@@ -1,4 +1,4 @@
-import Favorites from '@entities/favorites/index'
+import Favorites from '@entities/favorites'
 import React from 'react'
 
 function FavoritesPage() {

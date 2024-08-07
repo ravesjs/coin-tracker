@@ -1,5 +1,5 @@
 import React from 'react'
-import Coins from '@entities/coins/ui/Coins/Coins'
+import Coins from '@entities/coins'
 
 function HomePage() {
   return (
